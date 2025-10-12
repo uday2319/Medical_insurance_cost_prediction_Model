@@ -3,7 +3,7 @@ import joblib
 import numpy as np
 
 # Load your trained model
-model = joblib.load("C:/Users/User/OneDrive/Desktop/medicalapp/Medical_insurance1.pkl")
+model = joblib.load(open("C:/Users/User/OneDrive/Desktop/medicalapp/Medical_insurance1.pkl"))
 
 st.title("Medical Insurance Cost Prediction")
 
@@ -33,3 +33,4 @@ if st.button("Predict Insurance Cost"):
     
     # Show result
     st.success(f"Estimated Insurance Cost: ${prediction[0]:,.2f}")
+
