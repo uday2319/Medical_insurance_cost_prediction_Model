@@ -1,9 +1,9 @@
 import streamlit as st
-import pickle
+import joblib
 import numpy as np
 
 # Load your trained model
-model = pickle.load(open("Medical_insurance.pkl", "rb"))
+model = joblib.load(open("Medical_insurance1.pkl", "rb"))
 
 st.title("Medical Insurance Cost Prediction")
 
@@ -33,3 +33,4 @@ if st.button("Predict Insurance Cost"):
     
     # Show result
     st.success(f"Estimated Insurance Cost: ${prediction[0]:,.2f}")
+
